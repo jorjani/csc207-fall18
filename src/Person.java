@@ -12,6 +12,8 @@ public class Person {
     this.name = new String[] {"Michel", "Jordan"};
     this.SIN = "TBD";
   }
+  public Person(String[] names){
+  }
 
   public Person(String firstName, String lastName, String SIN) {
         this.name = new String[]{firstName,lastName};
