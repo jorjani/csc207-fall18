@@ -8,7 +8,17 @@ public class Person {
   String employeeID;
   String coursesTeaching;
 
-  /**
+  public Person() {
+    this.name = new String[] {"Michel", "Jordan"};
+    this.SIN = "TBD";
+  }
+
+  public Person(String firstName, String lastName, String SIN) {
+        this.name = new String[]{firstName,lastName};
+        this.SIN = SIN;
+    }
+
+    /**
    * @param firstName is the new first name
    * @param lastName is the new last name
    * @param id is the SIN of the person
