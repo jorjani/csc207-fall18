@@ -1,7 +1,7 @@
 public class Student extends Person {
   int studentNumber;
   String[] courses;
-  double gpa;
+  double gpa = 3;
 
   @Override
   public String toString() {
