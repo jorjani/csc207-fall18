@@ -1,8 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
   public static void main(String[] args) {
-    Person Mike = new Person("Mike", "Jordan", "456");
-    Person Mike2 = new Person("Mike", "Jordan", "456");
-    String[] people = new String[] {"Joe"};
-    System.out.println(Mike.equals(Mike2));
+    Person Mike = new Student("Mike", "Jordan", "456");
+    Person Dave = new Staff("Mike", "Jordan", "456");
+    List<Person> people = new ArrayList<Person>();
+    people.add(Mike);
+    people.add(Dave);
+    for (Person p : people) {
+      p.goToLecture();
+    }
   }
 }

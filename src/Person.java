@@ -1,7 +1,8 @@
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Person {
+public abstract class Person {
+  String lastName;
   String[] name;
   String SIN;
   String utorId;
@@ -10,21 +11,22 @@ public class Person {
 
   public Person() {
     this.name = new String[] {"Michel", "Jordan"};
+    this.lastName = "jordan";
     this.SIN = "TBD";
   }
-  public Person(String[] names){
-  }
 
-  public Person(String firstName, String lastName, String SIN) {
-        this.name = new String[]{firstName,lastName};
-        this.SIN = SIN;
-    }
+  public Person(String[] names) {}
 
-    /**
+  /**
    * @param firstName is the new first name
    * @param lastName is the new last name
-   * @param id is the SIN of the person
+   * @param SIN is the SIN of the person
    */
+  public Person(String firstName, String lastName, String SIN) {
+    this.name = new String[] {firstName, lastName};
+    this.SIN = SIN;
+  }
+
   public String getId() {
     return SIN;
   }
@@ -32,6 +34,8 @@ public class Person {
   public void setId(String id) {
     this.SIN = id;
   }
+
+  public abstract void goToLecture();
 
   public String[] getName() {
     return name;
