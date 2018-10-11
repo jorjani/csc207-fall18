@@ -61,4 +61,17 @@ public abstract class Person {
     result = 31 * result + Arrays.hashCode(name);
     return result;
   }
+
+  public double calculateDiscountedPrice(double originalPrice){
+    double discountedPrice = originalPrice;
+    if(this instanceof Staff){
+      discountedPrice *= .75;
+    }else if (this instanceof Student){
+      discountedPrice *= .9;
+    }
+    //This limits adding future extensions without modifying existing code breaking Open/Closed Principle.
+    /* else if(this instanceof Visitor)
+    return discountedPrice;*/
+    return discountedPrice;
+  }
 }
