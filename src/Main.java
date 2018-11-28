@@ -7,7 +7,6 @@ public class Main {
     Person Mike = new Student("Mike", "Jordan", "456");
     Person Dave = new Staff("Mike", "Jordan", "456");
     List<Person> people = new ArrayList<Person>();
-    // List<Student> students = new ArrayList<>();
     people.add(Mike);
     people.add(Dave);
     for (Person p : people) {
